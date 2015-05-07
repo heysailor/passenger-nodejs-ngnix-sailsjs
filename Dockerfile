@@ -22,6 +22,9 @@ CMD ["/sbin/my_init"]
 
 # ...put your own build instructions here...
 
+# Update things
+RUN apt-get update
+
 # Enable nginx and passenger
 RUN rm -f /etc/service/nginx/down
 
