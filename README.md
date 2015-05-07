@@ -1,6 +1,6 @@
 # Bootstrapped Phusion Passenger with NodeJs with nginx enabled, and Sails.js 0.11
 
-To use, make a second container with this as the base. Override the nginx conf files detailed in the Dockerfile to settings appropriate for your app.
+To use, make a second container containing your sails app with this as the base. Override the nginx conf files detailed in the Dockerfile to settings appropriate for your app. For an example of a child Dockerfile, see app/Dockerfile.
 
 Optimised for fast dev workflow: app restarts on every request to enable live code reloading via a mounted volume. To disable app restarts, remove 'tmp/always_restart.txt'.
 
