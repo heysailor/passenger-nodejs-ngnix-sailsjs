@@ -1,6 +1,6 @@
 #########################################################################################################
 #
-# heysailor/passenger-nodejs-nginx-sails
+# heysailor/passenger-nodejs-nginx-sailsjs
 #
 # By using a base image on which layer the working Docker container, rebuilding the working image becomes
 # very fast - eg on code changes.
