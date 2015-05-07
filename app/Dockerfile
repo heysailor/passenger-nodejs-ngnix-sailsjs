@@ -1,5 +1,5 @@
 # Build from base - may have to specify version later.
-FROM heysailor/passenger-nodejs-nginx-sails:latest
+FROM heysailor/passenger-nodejs-nginx-sailsjs:latest
 
 # Set environment variables
 ENV APP_DIR /home/app
