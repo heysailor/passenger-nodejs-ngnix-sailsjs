@@ -34,6 +34,8 @@ ADD 00_app_env.conf /etc/nginx/conf.d/00_app_env.conf
 # Add the sails app
 COPY ./app ${APP_DIR}
 
+COPY ./tmp /tmp
+
 # Build app
 WORKDIR ${APP_DIR}
 RUN npm install
@@ -41,6 +43,7 @@ RUN npm install
 # Change owner of app files to app (UID 999) (app.js is run by passenger as whatever its owner is)
 RUN chown -R 9999 /${APP_DIR}
 RUN chown -R 9999 ${APP_DIR}/.tmp
+RUN chown -R 9999 /tmp
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
